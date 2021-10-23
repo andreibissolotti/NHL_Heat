@@ -25,6 +25,7 @@ function getGitHubProfileInfo() {
       githubLogin.textContent = data.login
       githubLogin.href = data.html_url
       bio.textContent = data.bio
+      pageTitle.textContent = `${data.name} - DoWhile 2021`
     })
 }
 

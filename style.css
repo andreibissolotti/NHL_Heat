@@ -18,9 +18,10 @@ body {
 }
 
 main {
-  background: url(src/backGround.svg);
-  width: 375px;
-  height: 812px;
+  background: url(src/backGround.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
   color: var(--grey);
 }
 
@@ -82,4 +83,59 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+@media (min-width: 450px) {
+  main {
+    background: url(src/backGroundDeskTop.svg) no-repeat center/cover;
+    background-color: black;
+    width: 100%;
+    min-height: 812px;
+    height: 100%;
+    color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background-color: hsl(240, 6%, 13%);
+    background-image: url(./src/mask.svg);
+    max-width: 358px;
+    width: 358px;
+    height: 540px;
+    position: absolute;
+    top: 140px;
+  }
+
+  .avatar {
+    margin: 4.5rem auto 0;
+  }
+
+  p {
+    margin: 2rem 3rem 0;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
+
+  .faixa {
+    background-image: url(./src/faixa.svg);
+    position: absolute;
+    top: 0;
+    height: 158px;
+    width: 4rem;
+    z-index: 1;
+  }
+
+  .quebra {
+    background-color: hsl(240, 6%, 8%);
+    width: 5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 9.75rem;
+    left: calc(50% - 2.5rem);
+  }
 }
